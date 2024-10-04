@@ -5,11 +5,11 @@ import tkinter.font as tkFont
 from tkinter import messagebox
 from tkinter import ttk
 
-# Color palette: #00ABC3, #3C4048, #B2B2B2, #EAEAEA
+# Color palette: #F5F5F5 #48CFCB #229799 #424242
 
 root = Tk()
 root.title("Mini közösségi app")
-root.config(bg="#00ABC3")
+root.config(bg="#48CFCB")
 root.minsize(500,200)
 root.maxsize(500,200)
 root.geometry('500x200')
@@ -26,25 +26,25 @@ passw2= "Password"
 # Variables
 
 
-Cim = Label(root,text="Kérem adja meg a bejelentkezési adatait: ", font=Titlefont, fg="white",bg="#00ABC3") 
+Cim = Label(root,text="Kérem adja meg a bejelentkezési adatait: ", font=Titlefont, fg="white",bg="#48CFCB")
 Cim.place(relx=0.5,rely=0.1,anchor=N)
 
-userpass = Frame(root,bg="#00ABC3")
+userpass = Frame(root,bg="#48CFCB")
 userpass.place(rely=0.3,relx=0.5,anchor=N)
 
 
-UsernameFrame = Frame(userpass,bg="#00ABC3")
+UsernameFrame = Frame(userpass,bg="#48CFCB")
 UsernameFrame.grid(column=1,row=0)
 
-user = Label(UsernameFrame,text="Username:",bg="#00ABC3",font=Labelfont)
+user = Label(UsernameFrame,text="Username:",bg="#48CFCB",font=Labelfont)
 user.grid(column=0,row=2)
 user_entry = Entry(UsernameFrame, textvariable = user,width=50)
 user_entry.grid(column=1,row=2)
 
-passwdFrame = Frame(userpass,bg="#00ABC3")
+passwdFrame = Frame(userpass,bg="#48CFCB")
 passwdFrame.grid(column=1,row=2)
 
-passwd = Label(passwdFrame,text="password:",bg="#00ABC3",font=Labelfont)
+passwd = Label(passwdFrame,text="password:",bg="#48CFCB",font=Labelfont)
 passwd.grid(column=0,row=2)
 passwd_entry = Entry(passwdFrame, textvariable = passwd,width=50, show="*")
 passwd_entry.grid(column=1,row=2)
