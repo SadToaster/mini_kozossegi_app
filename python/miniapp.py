@@ -1,4 +1,5 @@
 
+
 from tkinter import *
 from random import *
 import tkinter.font as tkFont
@@ -82,7 +83,7 @@ def openuser1():
     user1window.minsize(1000, 750)
     user1window.maxsize(1000, 750)
     user1window.config(bg="#424242")
-    user1window.title("User Profile")  # Adjust the title
+    user1window.title("User Profile")  
 
     # info1
     lsideinfo = Frame(user1window, bg="#303030", width=200, height=750)
@@ -91,23 +92,21 @@ def openuser1():
     name1 = Label(lsideinfo, text="Vincent", font=("Arial", 20), bg="#303030", fg="#656565")
     name1.place(relx=0.5, rely=0, anchor=N)
 
-    # Profile picture
+    
     profilepic1 = Label(lsideinfo, image=profpic1)
     profilepic1.place(relx=0.5, rely=0.05, anchor=N)
 
-    # Buttons frame filling the space below the image
+    
     buttons = Frame(lsideinfo, bg="#303030")
-    buttons.place(relx=0, rely=0.35, relwidth=1, relheight=0.65)  # Fill the space below the image
+    buttons.place(relx=0, rely=0.35, relwidth=1, relheight=0.65) 
 
-    # INFO button
+ 
     info = Button(buttons, text="INFO", command=openinfo, height=2, bg="#48CFCB")
-    info.place(relx=0.5, rely=0,relwidth=0.95, anchor=N)  # Center the button in the frame
+    info.place(relx=0.5, rely=0,relwidth=0.95, anchor=N)  
     galeri = Button(buttons, text="GALERIE", command=openinfo, height=2, bg="#48CFCB")
-    galeri.place(relx=0.5, rely=0.1,relwidth=0.95, anchor=N)  # Center the button in the frame
+    galeri.place(relx=0.5, rely=0.1,relwidth=0.95, anchor=N)  
 
-    # You can add more buttons in a similar way:
-    # button2 = Button(buttons, text="Another Button", command=some_other_function)
-    # button2.place(relx=0.5, rely=0.6, anchor=CENTER)
+
 
 
 def openuser2():
