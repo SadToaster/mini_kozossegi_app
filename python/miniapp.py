@@ -27,6 +27,18 @@ passw2 = "2"
 profpic1 = Image.open("Vincent_profile.jpg")
 profpic1 = profpic1.resize((190,190))
 profpic1 = ImageTk.PhotoImage(profpic1)
+Vincent = {
+    "name": "Vincent",
+    "age": 17,
+    "image": "Vincent_profile.jpg",
+    "gender": "Male"
+}
+Mate = {
+    "name": "Máté",
+    "age": 17,
+    "image": profpic1,
+    "gender": "Male"
+}
 # Variables
 
 
@@ -56,23 +68,46 @@ passwd_entry.grid(column=1,   row=2)
 
 # Functions
 
+def openinfo():
+    InfoWin = Toplevel()
+    InfoWin.geometry("500x750")
+    InfoWin.minsize(500, 750)
+    InfoWin.maxsize(500, 750)
+    InfoWin.config(bg="#424242")
+
+
 def openuser1():
     user1window = Toplevel()
     user1window.geometry("1000x750")
-    user1window.minsize(1000,  750)
-    user1window.maxsize(1000,   750)
+    user1window.minsize(1000, 750)
+    user1window.maxsize(1000, 750)
     user1window.config(bg="#424242")
-    user1window.title(user1)
+    user1window.title("User Profile")  # Adjust the title
 
     # info1
     lsideinfo = Frame(user1window, bg="#303030", width=200, height=750)
     lsideinfo.place(relx=0, rely=0.5, anchor=W)
-    name1 = Label(lsideinfo, text="Vincent", font=Titlefont, bg="#303030", fg="#656565")
+
+    name1 = Label(lsideinfo, text="Vincent", font=("Arial", 20), bg="#303030", fg="#656565")
     name1.place(relx=0.5, rely=0, anchor=N)
+
+    # Profile picture
     profilepic1 = Label(lsideinfo, image=profpic1)
     profilepic1.place(relx=0.5, rely=0.05, anchor=N)
-    baseinfo = Frame(lsideinfo)
 
+    # Buttons frame filling the space below the image
+    buttons = Frame(lsideinfo, bg="#303030")
+    buttons.place(relx=0, rely=0.35, relwidth=1, relheight=0.65)  # Fill the space below the image
+
+    # INFO button
+    info = Button(buttons, text="INFO", command=openinfo, height=2, bg="#48CFCB")
+    info.place(relx=0.5, rely=0,relwidth=0.95, anchor=N)  # Center the button in the frame
+    galeri = Button(buttons, text="GALERIE", command=openinfo, height=2, bg="#48CFCB")
+    galeri.place(relx=0.5, rely=0.1,relwidth=0.95, anchor=N)  # Center the button in the frame
+
+    # You can add more buttons in a similar way:
+    # button2 = Button(buttons, text="Another Button", command=some_other_function)
+    # button2.place(relx=0.5, rely=0.6, anchor=CENTER)
 
 
 def openuser2():
