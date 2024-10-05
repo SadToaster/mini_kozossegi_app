@@ -20,11 +20,13 @@ Labelfont = tkFont.Font(family="Times New Roman",  size=12,  weight="bold", unde
 
 # Variables
 
-user1 = "1"
-passw1 = "1"
+user1 = ""
+passw1 = ""
 user2 = "2"
 passw2 = "2"
-
+profpic1 = Image.open("Vincent_profile.jpg")
+profpic1 = profpic1.resize((190,190))
+profpic1 = ImageTk.PhotoImage(profpic1)
 # Variables
 
 
@@ -62,10 +64,14 @@ def openuser1():
     user1window.config(bg="#424242")
     user1window.title(user1)
 
+    # info1
     lsideinfo = Frame(user1window, bg="#303030", width=200, height=750)
     lsideinfo.place(relx=0, rely=0.5, anchor=W)
     name1 = Label(lsideinfo, text="Vincent", font=Titlefont, bg="#303030", fg="#656565")
     name1.place(relx=0.5, rely=0, anchor=N)
+    profilepic1 = Label(lsideinfo, image=profpic1)
+    profilepic1.place(relx=0.5, rely=0.05, anchor=N)
+    baseinfo = Frame(lsideinfo)
 
 
 
